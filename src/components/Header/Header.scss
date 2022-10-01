@@ -54,15 +54,15 @@
         border-radius: 50%;
         transition: background 0.25s ease;
 
-        &:hover {
-          background-color: #f4f4f4;
-        }
-
         &.icon_notification {
         }
 
         &.icon_person {
           margin-right: 10px;
+        }
+
+        &:hover {
+          background-color: #f4f4f4;
         }
       }
 
