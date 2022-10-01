@@ -1,0 +1,98 @@
+@import '../../App.variables.scss';
+
+.header {
+  padding: 16px 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ededf4;
+
+  .center-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+      margin: 4px 0;
+
+      .header__img-logo {
+        height: 40px;
+        width: 148px;
+      }
+    }
+
+    .links {
+      color: $nav-text;
+
+      .links__list {
+        display: flex;
+        column-gap: 20px;
+
+        .links__item {
+          transition: opacity 0.2s ease;
+
+          .active {
+            color: $main-text;
+          }
+
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+      }
+    }
+
+    .auth {
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+      color: $nav-text;
+
+      .auth__icon {
+        height: 48px;
+        width: 48px;
+        background-color: #f9f9f9;
+        border: none;
+        border-radius: 50%;
+        transition: background 0.25s ease;
+
+        &:hover {
+          background-color: #f4f4f4;
+        }
+
+        &.icon_notification {
+        }
+
+        &.icon_person {
+          margin-right: 10px;
+        }
+      }
+
+      .auth__line {
+        height: 48px;
+        width: 2px;
+        background-color: #ededf4;
+        border-radius: 3px;
+      }
+
+      .auth__login-cont {
+        display: flex;
+        align-items: center;
+
+        .auth__link {
+          margin-right: 18px;
+          transition: opacity 0.2s ease;
+
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+
+        .auth__button {
+          height: 32px;
+          width: 32px;
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+  }
+}

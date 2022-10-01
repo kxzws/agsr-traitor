@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
-// import SignIn from './views/SignIn/SignIn';
+import SignIn from './views/SignIn/SignIn';
 import NotFound from './views/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import './App.scss';
@@ -10,7 +10,7 @@ const App = () => {
     <>
       <Header />
       <Routes>
-        {/* <Route path="/" element={<SignIn />} /> */}
+        <Route path="/login" element={<SignIn />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
