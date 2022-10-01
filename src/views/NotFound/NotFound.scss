@@ -1,0 +1,44 @@
+@import '../../App.variables.scss';
+
+.not-found {
+  padding: 160px 0;
+
+  .center-cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 28px;
+
+    .not-found__img {
+      height: 354px;
+      width: 700px;
+    }
+
+    .not-found__descr {
+      max-width: 391px;
+      text-align: center;
+
+      .not-found__title {
+        margin-bottom: 20px;
+        font-size: $title2-font;
+        font-weight: 700;
+        line-height: $title2-l-height;
+        color: $main-text;
+      }
+
+      .not-found__descr {
+        margin-bottom: 20px;
+        line-height: $not-found-l-height;
+        color: $nav-text;
+      }
+
+      .not-found__link {
+        font-size: $text2-font;
+        line-height: $footer-l-height;
+        color: $main-color;
+        // text-decoration: underline;
+        border-bottom: 2px solid $main-color;
+      }
+    }
+  }
+}
