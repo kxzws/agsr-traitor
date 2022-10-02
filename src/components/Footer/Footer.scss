@@ -3,7 +3,7 @@
 .footer {
   padding: 80px 0 96px;
   background-color: #fff;
-  border-top: 1px solid #ededf4;
+  border-top: 1px solid $lines-color;
 
   .center-cont {
     .info {
@@ -12,21 +12,21 @@
 
       .info__title {
         margin-bottom: 20px;
-        font-size: $subtitle-font;
+        font-size: $title4;
         font-weight: 700;
-        line-height: $subtitle-l-height;
-        color: $main-text;
+        line-height: $title4-lh;
+        color: $sec-black;
       }
 
       .info__descr {
         margin-bottom: 10px;
-        font-size: $sm-font;
-        line-height: $sm-l-height;
-        color: $add-text;
+        font-size: $text2;
+        line-height: $text2-lh;
+        color: $add-text1;
 
         &.descr_registres {
           margin-bottom: 20px;
-          line-height: $footer-l-height;
+          line-height: $text2-lh-160per;
         }
 
         &.descr_link {
@@ -71,8 +71,8 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      border-top: 1px solid #ededf4;
-      border-bottom: 1px solid #ededf4;
+      border-top: 1px solid $lines-color;
+      border-bottom: 1px solid $lines-color;
       border-radius: 3px;
     }
 
@@ -80,9 +80,9 @@
       text-align: center;
 
       .developer__descr {
-        font-size: $sm-font;
-        line-height: $footer-l-height;
-        color: $add-light-text;
+        font-size: $text2;
+        line-height: $text2-lh-160per;
+        color: $sec-light-grey;
       }
     }
   }

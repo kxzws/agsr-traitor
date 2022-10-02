@@ -12,10 +12,10 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  font-size: $text-font;
+  font-size: $text;
   font-weight: 500;
-  line-height: $l-height;
-  color: $main-text;
+  line-height: $text-lh;
+  color: $sec-black;
 }
 
 ::-webkit-scrollbar {

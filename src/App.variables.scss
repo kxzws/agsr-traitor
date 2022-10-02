@@ -1,30 +1,42 @@
-$sm-font: 14px;
-$sm-l-height: 17px;
-$footer-l-height: 22px;
-
-$text-font: 16px;
-$text2-font: 18px;
-$l-height: 19px;
-$not-found-l-height: 26px;
-
-$pholder-font: 16px;
-$pholder-l-height: 20px;
-
-$title-font: 48px;
-$title-l-height: 58px;
-
-$title2-font: 36px;
-$title2-l-height: 44px;
-
-$subtitle-font: 20px;
-$subtitle-l-height: 24px;
-
-$main-color: #13a3b9;
-$main-text: #272a33;
-$nav-text: #6e7686;
-$add-text: #676a71;
-$add-grey-text: #a8aaae;
-$add-light-text: #a7b4cc;
-$pholder-text: #d4d7db;
-
 $max-width: 1170px;
+
+
+/* fonts size and line-height */
+$title1: 48px;
+$title1-lh: 58px;
+
+$title2: 36px;
+$title2-lh: 44px;
+
+$title4: 20px;
+$title4-lh: 24px;
+
+$subtitle3: 18px;
+$subtitle3-lh: 22px;
+
+$subtitle4: 16px;
+$subtitle4-lh: 20px;
+
+$text: 16px;
+$text-lh: 19px;
+$text-lh-160per: 26px;
+
+$text2: 14px;
+$text2-lh: 17px;
+$text2-lh-160per: 22px;
+
+
+/* colors */
+// main
+$main-color: #13a3b9;
+
+// secondary
+$sec-black: #272a33;
+$sec-grey: #6e7686;
+$sec-light-grey: #a7b4cc;
+
+// additional
+$add-text1: #676a71;
+$add-text2: #a8aaae;
+$pholder-text: #d4d7db;
+$lines-color: #ededf4;

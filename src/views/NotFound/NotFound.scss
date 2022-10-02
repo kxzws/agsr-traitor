@@ -20,23 +20,22 @@
 
       .not-found__title {
         margin-bottom: 20px;
-        font-size: $title2-font;
+        font-size: $title2;
         font-weight: 700;
-        line-height: $title2-l-height;
-        color: $main-text;
+        line-height: $title2-lh;
+        color: $sec-black;
       }
 
       .not-found__descr {
         margin-bottom: 20px;
-        line-height: $not-found-l-height;
-        color: $nav-text;
+        line-height: $text-lh-160per;
+        color: $sec-grey;
       }
 
       .not-found__link {
-        font-size: $text2-font;
-        line-height: $footer-l-height;
+        font-size: $subtitle3;
+        line-height: $text2-lh-160per;
         color: $main-color;
-        // text-decoration: underline;
         border-bottom: 2px solid $main-color;
       }
     }
