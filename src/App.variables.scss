@@ -1,6 +1,5 @@
 $max-width: 1170px;
 
-
 /* fonts size and line-height */
 $title1: 48px;
 $title1-lh: 58px;
@@ -25,10 +24,12 @@ $text2: 14px;
 $text2-lh: 17px;
 $text2-lh-160per: 22px;
 
-
 /* colors */
 // main
 $main-color: #13a3b9;
+$add-color: #b3f5ff;
+$success: #22b07d;
+$error: #f44336;
 
 // secondary
 $sec-black: #272a33;
@@ -39,4 +40,5 @@ $sec-light-grey: #a7b4cc;
 $add-text1: #676a71;
 $add-text2: #a8aaae;
 $pholder-text: #d4d7db;
+$input-field: #f6f6f9;
 $lines-color: #ededf4;

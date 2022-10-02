@@ -1,5 +1,160 @@
 @import '../../App.variables.scss';
 
 .sign-in {
-  padding: 100px 0;
+  padding: 80px 0 160px;
+
+  .center-cont {
+    .sign-in__link {
+      margin-bottom: 48px;
+      font-size: $subtitle4;
+      line-height: $subtitle4-lh;
+      color: $sec-grey;
+      display: flex;
+      align-items: center;
+      transition: opacity 0.2s ease;
+
+      .arrow-wrapper {
+        margin-right: 10px;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .sign-in__img {
+          height: 18px;
+          width: 10px;
+        }
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+
+    .auth-form {
+      margin: 0 auto;
+      max-width: 430px;
+
+      .auth-form__title {
+        margin-bottom: 40px;
+        font-size: $title1;
+        font-weight: 700;
+        line-height: $title1-lh;
+        color: $sec-black;
+      }
+
+      .auth-form__label {
+        margin-bottom: 5px;
+        font-size: $text2;
+        line-height: $text2-lh;
+        color: $sec-grey;
+      }
+
+      .input-wrapper {
+        position: relative;
+
+        .btn-visibility {
+          padding: 6px 4px;
+          height: 28px;
+          width: 28px;
+          position: absolute;
+          top: 14px;
+          right: 16px;
+          background-color: transparent;
+          border: none;
+
+          .btn-img {
+            height: 16px;
+            width: 20px;
+            filter: invert(92%) sepia(94%) saturate(4156%) hue-rotate(177deg) brightness(84%)
+              contrast(87%);
+            transition: all 0.2s ease-in;
+          }
+
+          &:hover .btn-img {
+            opacity: 0.85;
+            filter: invert(87%) sepia(19%) saturate(960%) hue-rotate(167deg) brightness(103%)
+              contrast(106%);
+          }
+        }
+      }
+
+      .auth-form__input {
+        margin-bottom: 20px;
+        padding: 0 18px;
+        height: 56px;
+        width: 100%;
+        background-color: $input-field;
+        border: none;
+        border-radius: 5px;
+
+        &::placeholder {
+          font-size: $subtitle4;
+          line-height: $subtitle4-lh;
+          color: $pholder-text;
+        }
+
+        &.input-login {
+        }
+
+        &.input-password {
+        }
+
+        &:hover,
+        &:focus {
+          caret-color: $main-color;
+          outline: 1px solid $main-color;
+        }
+
+        &.incorrect:hover,
+        &.incorrect:focus {
+          caret-color: $error;
+          outline: 1px solid $error;
+        }
+
+        &.correct:hover,
+        &.correct:focus {
+          caret-color: $success;
+          outline: 1px solid $success;
+        }
+      }
+
+      .auth-form__btn {
+        height: 56px;
+        width: 100%;
+        display: block;
+        font-size: $text2;
+        line-height: $text2-lh;
+        color: $add-text1;
+        text-align: center;
+        background-color: transparent;
+        border: 1px solid $sec-light-grey;
+        border-radius: 5px;
+        transition: background 0.2s linear, transform 0.1s ease-in;
+
+        &:hover {
+          background-color: rgba(#000, 0.05);
+        }
+
+        &:active {
+          transform: scale(0.97);
+        }
+
+        &.btn_submit {
+          margin-bottom: 20px;
+          font-size: $subtitle3;
+          font-weight: 600;
+          line-height: $subtitle3-lh;
+          color: #fff;
+          background-color: $main-color;
+          border: none;
+
+          &:hover {
+            background-color: rgba($main-color, 0.8);
+          }
+        }
+      }
+    }
+  }
 }
