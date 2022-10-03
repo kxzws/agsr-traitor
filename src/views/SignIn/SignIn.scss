@@ -120,6 +120,18 @@
         }
       }
 
+      .auth-form__error {
+        margin-top: -15px;
+        margin-bottom: 20px;
+        font-size: $text2;
+        line-height: $text2-lh;
+        color: $error;
+
+        &.none {
+          display: none;
+        }
+      }
+
       .auth-form__btn {
         height: 56px;
         width: 100%;
@@ -143,6 +155,9 @@
 
         &.btn_submit {
           margin-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           font-size: $subtitle3;
           font-weight: 600;
           line-height: $subtitle3-lh;

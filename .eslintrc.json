@@ -50,7 +50,8 @@
     "jsx-a11y/control-has-associated-label": "off",
     "no-param-reassign": "off",
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": "error"
+    "@typescript-eslint/no-shadow": "error",
+    "react/jsx-props-no-spreading": "off"
   },
   "settings": {
     "react": {
