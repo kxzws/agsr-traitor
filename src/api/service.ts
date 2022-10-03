@@ -1,8 +1,8 @@
 import authInstance from './instance';
 import { ISignInData } from '../types/interfaces';
-import { userCard } from './types';
+import { UserCard } from './types';
 
-const fetchLoginUser = async (data: ISignInData): Promise<userCard> => {
+const fetchLoginUser = async (data: ISignInData): Promise<UserCard> => {
   try {
     const QUERY_URL = 'login';
     const { login, password } = data;

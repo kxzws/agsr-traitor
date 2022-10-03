@@ -92,6 +92,7 @@
         &::placeholder {
           font-size: $subtitle4;
           line-height: $subtitle4-lh;
+          letter-spacing: 0.5px;
           color: $pholder-text;
         }
 
@@ -138,6 +139,7 @@
         display: block;
         font-size: $text2;
         line-height: $text2-lh;
+        letter-spacing: 0.5px;
         color: $add-text1;
         text-align: center;
         background-color: transparent;

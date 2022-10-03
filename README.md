@@ -1,22 +1,20 @@
-# Getting Started with Create React App
+# Getting Started with agsr-traitor
 
-## Available Scripts
+In the project directory, you must run:
 
-In the project directory, you can run:
+`npm start`
+run the project on the port 3000
 
-### `npm start`
+`npx json-server --watch ./json-server/db.json --port 3001 -m ./node_modules/json-server-auth`
+run the json-server with db and auth on the port 3001
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Test accounts for auth
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+login: _correct1@gmail.com_
+password: _test1234_ 
 
-### `npm test`
+login: _correct2@gmail.com_
+password: _test1111_ 
 
-Launches the test runner in the interactive watch mode.\
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+login: _correct3@gmail.com_
+password: _test1122_ 

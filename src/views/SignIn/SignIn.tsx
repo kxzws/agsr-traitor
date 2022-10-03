@@ -22,8 +22,10 @@ const SignIn = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<ISignInData>();
+
   const { isAuth, isLoading, error } = useTypedSelector((state) => state.auth);
   const dispatch = useAppDispatch();
+
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isAlert, setIsAlert] = useState<boolean>(false);
 

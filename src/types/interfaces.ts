@@ -1,6 +1,4 @@
-interface ISignInData {
+export interface ISignInData {
   login: string;
   password: string;
 }
-
-export type { ISignInData };

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { userCard } from '../../api/types';
+import { UserCard } from '../../api/types';
 import loginUser from './thunks';
 import { AuthState } from './types';
 
@@ -18,13 +18,14 @@ export const authSlice = createSlice({
     builder
       .addCase(loginUser.pending, (state) => {
         state.accessToken = null;
+        state.isAuth = false;
         state.isLoading = true;
-      })
-      .addCase(loginUser.fulfilled, (state, action: PayloadAction<userCard>) => {
-        state.accessToken = action.payload.accessToken;
-        state.isLoading = false;
-        state.isAuth = true;
         state.error = null;
+      })
+      .addCase(loginUser.fulfilled, (state, action: PayloadAction<UserCard>) => {
+        state.accessToken = action.payload.accessToken;
+        state.isAuth = true;
+        state.isLoading = false;
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoading = false;

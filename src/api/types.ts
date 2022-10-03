@@ -1,11 +1,9 @@
-type user = {
+export type User = {
   email: string;
   password: string;
 };
 
-type userCard = {
+export type UserCard = {
   accessToken: string;
-  user: user;
+  user: User;
 };
-
-export type { userCard };
