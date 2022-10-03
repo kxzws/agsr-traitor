@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import CircularProgress from '@mui/material/CircularProgress';
 import Alert from '@mui/material/Alert';
@@ -17,7 +17,6 @@ import openedEye from '../../assets/svg/opened_eye.svg';
 import './SignIn.scss';
 
 const SignIn = () => {
-  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -34,7 +33,15 @@ const SignIn = () => {
   };
 
   const onSubmit: SubmitHandler<ISignInData> = async (data) => {
-    // login: eve.holt@reqres.in
+    // email: correct1gmail.com
+    // pass: test1234
+
+    // email: correct2gmail.com
+    // pass: test1111
+
+    // email: correct3gmail.com
+    // pass: test1122
+
     await dispatch(loginUser(data));
     setIsAlert(true);
   };
