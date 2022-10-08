@@ -1,0 +1,11 @@
+@import '../../../App.variables.scss';
+
+.table {
+  .table__title {
+    margin-bottom: 20px;
+    font-size: $subtitle3;
+    font-weight: 600;
+    line-height: $subtitle3-lh;
+    color: $sec-grey;
+  }
+}

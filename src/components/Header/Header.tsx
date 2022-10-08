@@ -39,9 +39,9 @@ const Header = () => {
           </button>
           <div className="auth__line" />
           <div className="auth__login-cont">
-            <button type="button" className="auth__icon icon_person">
+            <NavLink to="/personal" className="auth__icon icon_person">
               <img src={person} alt="auth person" />
-            </button>
+            </NavLink>
             <NavLink to="/login" className="auth__link">
               Вход в аккаунт
             </NavLink>

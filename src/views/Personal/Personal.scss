@@ -1,0 +1,15 @@
+@import '../../App.variables.scss';
+
+.personal {
+  padding: 80px 0;
+
+  .center-cont {
+    .personal__title {
+      margin-bottom: 40px;
+      font-size: $title2;
+      font-weight: 700;
+      line-height: $title2-lh;
+      color: $sec-black;
+    }
+  }
+}
