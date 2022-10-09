@@ -1,8 +1,20 @@
-import './Personal.scss';
-import SearchBar from './SearchBar.scss/SearchBar';
+import { useCallback } from 'react';
+import useTypedSelector from '../../hooks/useTypedSelector';
+import useAppDispatch from '../../hooks/useAppDispatch';
+import getTableData from '../../redux/services/thunks';
+import SearchBar from './SearchBar/SearchBar';
 import Table from './Table/Table';
+import './Personal.scss';
 
 const Personal = () => {
+  const { data, isLoading } = useTypedSelector((state) => state.services);
+
+  const dispatch = useAppDispatch();
+
+  const loadData = useCallback(() => {
+    dispatch(getTableData());
+  }, [dispatch]);
+
   return (
     <section className="personal">
       <div className="center-cont">
@@ -10,7 +22,7 @@ const Personal = () => {
 
         <SearchBar />
 
-        <Table />
+        <Table data={data} loadData={loadData} isLoading={isLoading} />
       </div>
     </section>
   );

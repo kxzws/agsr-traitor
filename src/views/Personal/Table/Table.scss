@@ -8,4 +8,43 @@
     line-height: $subtitle3-lh;
     color: $sec-grey;
   }
+
+  .table_img {
+    margin-right: 9px;
+    margin-bottom: 5px;
+    height: 18px;
+    width: 18px;
+  }
+
+  .table__row {
+    border-bottom: 1px solid $lines-color;
+
+    & th,
+    & td {
+      padding: 10px;
+      font-family: inherit;
+      font-size: $text;
+      font-weight: 500;
+      line-height: $text-lh;
+      letter-spacing: normal;
+      border: 0;
+    }
+
+    & td:last-child {
+      color: $main-color;
+    }
+
+    & th {
+      padding-bottom: 5px;
+      color: $main-color;
+    }
+
+    & td {
+      color: $add-text1;
+    }
+  }
+
+  tbody .table__row:last-child {
+    border-bottom: 0;
+  }
 }

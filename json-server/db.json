@@ -18,6 +18,7 @@
   ],
   "elServices": [
     {
+      "id": 1,
       "name": "Место жительства",
       "mark": "ResidencePlace",
       "infSystemNameRU": "РН",
@@ -41,6 +42,7 @@
       "GISOwner": "Министерство юстиции"
     },
     {
+      "id": 2,
       "name": "Имя собственика",
       "mark": "Name",
       "infSystemNameRU": "РН",
@@ -64,6 +66,7 @@
       "GISOwner": null
     },
     {
+      "id": 3,
       "name": "Имя владельца",
       "mark": "nameOder",
       "infSystemNameRU": "АисГАЧ",
@@ -87,6 +90,7 @@
       "GISOwner": null
     },
     {
+      "id": 4,
       "name": "Имя работника",
       "mark": "nameChild",
       "infSystemNameRU": "РН",
@@ -110,6 +114,7 @@
       "GISOwner": null
     },
     {
+      "id": 5,
       "name": "Имя гражданина",
       "mark": "nameСitizen",
       "infSystemNameRU": "АисПаспорт",
@@ -133,6 +138,7 @@
       "GISOwner": null
     },
     {
+      "id": 6,
       "name": "Имя сервиса по получению данных",
       "mark": "serviceName",
       "infSystemNameRU": "АисДанные",
@@ -156,6 +162,7 @@
       "GISOwner": null
     },
     {
+      "id": 7,
       "name": "Наименование информационной системы",
       "mark": "gisName",
       "infSystemNameRU": "АисЕГРЮЛиИП",
@@ -179,6 +186,7 @@
       "GISOwner": null
     },
     {
+      "id": 8,
       "name": "Наименование владельца информационной системы",
       "mark": "gisOwnerName",
       "infSystemNameRU": "Министерство юстиции",
@@ -202,6 +210,7 @@
       "GISOwner": null
     },
     {
+      "id": 9,
       "name": "Наименование информационного ресурса",
       "mark": "girName",
       "infSystemNameRU": "ЕГРЮЛиИП",
@@ -225,6 +234,7 @@
       "GISOwner": null
     },
     {
+      "id": 10,
       "name": "Наименование информационного ресурса",
       "mark": "girName",
       "infSystemNameRU": "ЕГРЮЛиИП",
@@ -248,6 +258,7 @@
       "GISOwner": null
     },
     {
+      "id": 11,
       "name": "УНП владельца информационной системы",
       "mark": "gisOwnerUnp",
       "infSystemNameRU": "100619144",
@@ -271,6 +282,7 @@
       "GISOwner": null
     },
     {
+      "id": 12,
       "name": "Имя собственика | 2",
       "mark": "Name",
       "infSystemNameRU": "РН",
@@ -294,6 +306,7 @@
       "GISOwner": null
     },
     {
+      "id": 13,
       "name": "Имя владельца | 2",
       "mark": "nameOder",
       "infSystemNameRU": "АисГАЧ",
@@ -317,6 +330,7 @@
       "GISOwner": null
     },
     {
+      "id": 14,
       "name": "Имя работника | 2",
       "mark": "nameChild",
       "infSystemNameRU": "РН",
@@ -340,6 +354,7 @@
       "GISOwner": null
     },
     {
+      "id": 15,
       "name": "Имя гражданина | 2",
       "mark": "nameСitizen",
       "infSystemNameRU": "АисПаспорт",
@@ -363,6 +378,7 @@
       "GISOwner": null
     },
     {
+      "id": 16,
       "name": "Имя сервиса по получению данных | 2",
       "mark": "serviceName",
       "infSystemNameRU": "АисДанные",
@@ -386,6 +402,7 @@
       "GISOwner": null
     },
     {
+      "id": 17,
       "name": "Наименование информационной системы | 2",
       "mark": "gisName",
       "infSystemNameRU": "АисЕГРЮЛиИП",
@@ -409,6 +426,7 @@
       "GISOwner": null
     },
     {
+      "id": 18,
       "name": "Наименование владельца информационной системы | 2",
       "mark": "gisOwnerName",
       "infSystemNameRU": "Министерство юстиции",
@@ -432,6 +450,7 @@
       "GISOwner": null
     },
     {
+      "id": 19,
       "name": "Наименование информационного ресурса | 2",
       "mark": "girName",
       "infSystemNameRU": "ЕГРЮЛиИП",
@@ -455,6 +474,7 @@
       "GISOwner": null
     },
     {
+      "id": 20,
       "name": "Наименование информационного ресурса | 2",
       "mark": "girName",
       "infSystemNameRU": "ЕГРЮЛиИП",
@@ -478,6 +498,7 @@
       "GISOwner": null
     },
     {
+      "id": 21,
       "name": "УНП владельца информационной системы | 2",
       "mark": "gisOwnerUnp",
       "infSystemNameRU": "100619144",
