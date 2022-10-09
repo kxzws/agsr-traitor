@@ -112,7 +112,7 @@ const Table = (props: ITableProps) => {
                   onClick={(event) => handleClick(event, row)}
                   hover
                   sx={{
-                    '&:nth-child(2n)': {
+                    '&:nth-of-type(2n)': {
                       backgroundColor: `${isItemSelected ? 'rgba(25, 118, 210, 0.08)' : '#fcfcfc'}`,
                     },
                   }}

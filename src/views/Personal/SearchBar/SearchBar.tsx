@@ -1,18 +1,28 @@
 import { useState } from 'react';
+import useAppDispatch from '../../../hooks/useAppDispatch';
+import useTypedSelector from '../../../hooks/useTypedSelector';
 import { SearchFilter, SearchType } from '../../../types/common';
+import { servicesSlice } from '../../../redux/services/slices';
 import loupe from '../../../assets/svg/loupe.svg';
 import clean from '../../../assets/svg/clean.svg';
 import './SearchBar.scss';
 
 const SearchBar = () => {
-  const [isSystemChecked, setIsSystemChecked] = useState<boolean>(true);
-  const [isNameChecked, setIsNameChecked] = useState<boolean>(false);
-  const [isMarkChecked, setIsMarkChecked] = useState<boolean>(false);
+  const { searchType, searchQuery, searchFilter } = useTypedSelector((state) => state.services);
 
-  const [searchValue, setSearchValue] = useState<string>('');
+  const { changeType, changeQuery, changeFilter } = servicesSlice.actions;
+  const dispatch = useAppDispatch();
 
-  const [isAllChecked, setIsAllChecked] = useState<boolean>(true);
-  const [isStandardChecked, setIsStandardChecked] = useState<boolean>(false);
+  const [isSystemChecked, setIsSystemChecked] = useState<boolean>(searchType === SearchType.system);
+  const [isNameChecked, setIsNameChecked] = useState<boolean>(searchType === SearchType.name);
+  const [isMarkChecked, setIsMarkChecked] = useState<boolean>(searchType === SearchType.mark);
+
+  const [searchValue, setSearchValue] = useState<string>(searchQuery);
+
+  const [isAllChecked, setIsAllChecked] = useState<boolean>(searchFilter === SearchFilter.all);
+  const [isStandardChecked, setIsStandardChecked] = useState<boolean>(
+    searchFilter === SearchFilter.standard
+  );
 
   const handleTypeCheck = (e: React.FormEvent<HTMLInputElement>) => {
     const { value } = e.currentTarget;
@@ -25,6 +35,8 @@ const SearchBar = () => {
         if (isMarkChecked) {
           setIsMarkChecked(false);
         }
+
+        dispatch(changeType(SearchType.system));
         break;
       case SearchType.name:
         if (isSystemChecked) {
@@ -34,6 +46,8 @@ const SearchBar = () => {
         if (isMarkChecked) {
           setIsMarkChecked(false);
         }
+
+        dispatch(changeType(SearchType.name));
         break;
       case SearchType.mark:
         if (isSystemChecked) {
@@ -43,21 +57,8 @@ const SearchBar = () => {
           setIsNameChecked(false);
         }
         setIsMarkChecked(true);
-        break;
-      default:
-    }
-  };
 
-  const handleFilterCheck = (e: React.FormEvent<HTMLInputElement>) => {
-    const { value } = e.currentTarget;
-    switch (value) {
-      case SearchFilter.all:
-        setIsAllChecked(true);
-        setIsStandardChecked(false);
-        break;
-      case SearchFilter.standard:
-        setIsAllChecked(false);
-        setIsStandardChecked(true);
+        dispatch(changeType(SearchType.mark));
         break;
       default:
     }
@@ -70,13 +71,38 @@ const SearchBar = () => {
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      // something
+      dispatch(changeQuery(searchValue));
     }
   };
 
   const handleCleanClick = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setSearchValue('');
+    dispatch(changeQuery(''));
+  };
+
+  const handleSearchClick = (e: React.FormEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    dispatch(changeQuery(searchValue));
+  };
+
+  const handleFilterCheck = (e: React.FormEvent<HTMLInputElement>) => {
+    const { value } = e.currentTarget;
+    switch (value) {
+      case SearchFilter.all:
+        setIsAllChecked(true);
+        setIsStandardChecked(false);
+
+        dispatch(changeFilter(SearchFilter.all));
+        break;
+      case SearchFilter.standard:
+        setIsAllChecked(false);
+        setIsStandardChecked(true);
+
+        dispatch(changeFilter(SearchFilter.standard));
+        break;
+      default:
+    }
   };
 
   return (
@@ -89,8 +115,7 @@ const SearchBar = () => {
             id={SearchType.system}
             name="searchType"
             value={SearchType.system}
-            onInput={handleTypeCheck}
-            defaultChecked
+            onChange={handleTypeCheck}
           />
           Поиск по ИС / ИР
         </label>
@@ -102,7 +127,7 @@ const SearchBar = () => {
             id={SearchType.name}
             name="searchType"
             value={SearchType.name}
-            onInput={handleTypeCheck}
+            onChange={handleTypeCheck}
           />
           Поиск по наименование
         </label>
@@ -114,7 +139,7 @@ const SearchBar = () => {
             id={SearchType.mark}
             name="searchType"
             value={SearchType.mark}
-            onInput={handleTypeCheck}
+            onChange={handleTypeCheck}
           />
           Поиск по метке
         </label>
@@ -135,7 +160,7 @@ const SearchBar = () => {
             <img src={clean} alt="loupe: search" className="search-group__img img_clean" />
           </button>
         </div>
-        <button type="button" className="search__btn">
+        <button type="button" className="search__btn" onClick={handleSearchClick}>
           Показать
         </button>
       </div>
@@ -148,8 +173,7 @@ const SearchBar = () => {
             id={SearchFilter.all}
             name="searchFilter"
             value={SearchFilter.all}
-            onInput={handleFilterCheck}
-            defaultChecked
+            onChange={handleFilterCheck}
           />
           Показать все значения
         </label>
@@ -161,7 +185,7 @@ const SearchBar = () => {
             id={SearchFilter.standard}
             name="searchFilter"
             value={SearchFilter.standard}
-            onInput={handleFilterCheck}
+            onChange={handleFilterCheck}
           />
           Отображать только эталонные значения метаданных
         </label>

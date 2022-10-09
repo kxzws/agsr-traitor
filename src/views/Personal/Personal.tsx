@@ -7,13 +7,15 @@ import Table from './Table/Table';
 import './Personal.scss';
 
 const Personal = () => {
-  const { data, isLoading } = useTypedSelector((state) => state.services);
+  const { data, searchType, searchQuery, searchFilter, isLoading } = useTypedSelector(
+    (state) => state.services
+  );
 
   const dispatch = useAppDispatch();
 
   const loadData = useCallback(() => {
-    dispatch(getTableData());
-  }, [dispatch]);
+    dispatch(getTableData({ searchType, searchQuery, searchFilter }));
+  }, [dispatch, searchType, searchQuery, searchFilter]);
 
   return (
     <section className="personal">

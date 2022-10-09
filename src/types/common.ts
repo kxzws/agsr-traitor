@@ -1,5 +1,5 @@
 export enum SearchType {
-  system = 'system',
+  system = 'infSystemNameRU',
   name = 'name',
   mark = 'mark',
 }
