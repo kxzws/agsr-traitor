@@ -47,4 +47,18 @@
   tbody .table__row:last-child {
     border-bottom: 0;
   }
+
+  .table__footer {
+    padding: 19.5px 0;
+
+    .table__selected {
+      font-size: $text2;
+      line-height: $text2-lh;
+      color: $add-text2;
+      
+      .selected_style {
+        color: $add-text1;
+      }
+    }
+  }
 }

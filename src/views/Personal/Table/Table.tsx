@@ -56,6 +56,7 @@ const Table = (props: ITableProps) => {
 
       <TableContainer
         sx={{
+          mb: '20px',
           maxWidth: '1170px',
           border: '1px solid #ededf4',
           borderRadius: '5px',
@@ -67,8 +68,8 @@ const Table = (props: ITableProps) => {
               <TableCell width="44" align="center">
                 <Checkbox
                   color="primary"
-                  indeterminate={selectedRows.length > 0 && selectedRows.length < ROWS_LIMIT}
-                  checked={ROWS_LIMIT > 0 && selectedRows.length === ROWS_LIMIT}
+                  indeterminate={selectedRows.length > 0 && selectedRows.length < data.length}
+                  checked={data.length > 0 && selectedRows.length === data.length}
                   onChange={handleSelectAllClick}
                   inputProps={{
                     'aria-label': 'select all desserts',
@@ -140,6 +141,12 @@ const Table = (props: ITableProps) => {
           </TableBody>
         </TableTemplate>
       </TableContainer>
+
+      <div className="table__footer">
+        <p className="table__selected">
+          Выделено: <span className="selected_style">{selectedRows.length} элементов</span>
+        </p>
+      </div>
     </div>
   );
 };
