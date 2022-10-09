@@ -1,0 +1,77 @@
+@import '../../../../App.variables.scss';
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: $overlay;
+}
+
+.modal {
+  width: 840px;
+  position: absolute;
+  top: 262px;
+  left: calc(50% - 420px);
+  z-index: 3;
+  background-color: #fff;
+  filter: drop-shadow(0px 15px 40px rgba(59, 61, 65, 0.12));
+  border-radius: 10px;
+
+  .modal__header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $fields-color;
+    border-radius: 10px;
+
+    .modal__title {
+      font-size: $title4;
+      font-weight: 700;
+      line-height: $title4-lh;
+      color: $sec-black;
+    }
+
+    .modal__close-btn {
+      padding: 0;
+      height: 32px;
+      width: 32px;
+      background-color: transparent;
+      border: none;
+
+      .modal__close-img {
+        height: 21px;
+        width: 21px;
+      }
+    }
+  }
+
+  .modal__body {
+    .modal__row {
+      padding: 20px;
+      display: flex;
+      gap: 80px;
+
+      .modal__subtitle {
+        width: 257px;
+        font-size: $text;
+        line-height: $text-lh;
+        color: $sec-light-grey;
+      }
+
+      .modal__text {
+        max-width: 440px;
+        font-size: $text;
+        line-height: $text-lh;
+        color: $sec-black;
+      }
+    }
+  }
+}
+
+.invisible {
+  display: none;
+}

@@ -10,3 +10,9 @@ export interface ITableProps {
   loadData: () => void;
   isLoading: boolean;
 }
+
+export interface IModalProps {
+  item: TableData | null;
+  isOpen: boolean;
+  onClose: () => void;
+}
