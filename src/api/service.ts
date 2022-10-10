@@ -3,7 +3,8 @@ import { ISignInData } from '../types/interfaces';
 import { TableData, UserCard } from './types';
 import { SearchFilter, SearchType } from '../types/common';
 
-const ROWS_LIMIT = 10;
+// const ROWS_LIMIT = 10;
+const ROWS_LIMIT = null;
 
 export const fetchLoginUser = async (data: ISignInData): Promise<UserCard> => {
   try {
